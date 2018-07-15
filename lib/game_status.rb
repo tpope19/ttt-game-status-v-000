@@ -21,11 +21,11 @@ def full?(board)
 end
 
 def draw(board)
-  won?(board) == false && full?(board) == true
+  won?(board) == nil && full?(board) == true
 end
 
 def over?(board)
-  won?(board).class == Array || draw?(board) == true
+  draw(board) == true || won?(board) != nil
 end
 
 def play(board)
