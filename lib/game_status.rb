@@ -15,8 +15,8 @@ def won?(board)
 end
 
 def full?(board)
-  board.all? do |index|
-    index == "X" || index = "O"
+  board.none? do |i|
+    i == " " || i.nil?
   end
 end
 
