@@ -11,7 +11,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |winner_set|
-    if array[winner_set[0]] == array[winner_set[1]] && array[winner_set[1]] == array[winner_set[2]] && position_taken?(array, winner_set[0])
+    if board[winner_set[0]] == board[winner_set[1]] && board[winner_set[1]] == board[winner_set[2]] && position_taken?(board, winner_set[0])
       puts "Winner!"
       return true
       return winner_set
