@@ -10,8 +10,12 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.find do |win_combination|
-    board[win_combination[0]] == board[win_combination[1]] && board[win_combination[0]] == board[win_combination[2]] && position_taken?(board, win_combination[0])
+  WIN_COMBINATIONS.each do |winner_set|
+    if array[winner_set[0]] == array[winner_set[1]] && array[winner_set[1]] == array[winner_set[2]] && position_taken?(array, winner_set[0])
+      puts "Winner!"
+      return true
+      return winner_set
+    end
   end
 end
 
