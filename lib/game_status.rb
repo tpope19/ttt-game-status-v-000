@@ -29,7 +29,9 @@ end
 
 
 def full?(board)
-  board.all?{|occupied| occupied != " "}
+  board.all? do |index|
+    index == "X" || index == "O"
+  end
 end
 
 
